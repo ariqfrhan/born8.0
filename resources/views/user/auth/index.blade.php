@@ -21,7 +21,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-{{-- <body class="w-full h-full drop-shadow-md bg-gradient-to-br from-purple/50 to-yellow/30">
+<body class="w-full h-full drop-shadow-md bg-gradient-to-br from-purple/50 to-yellow/30">
     <section class="gradient-form flex flex-col justify-center items-center md:h-screen relative">
         <div class="container py-12 px-6">
             <div class="flex justify-center items-center flex-wrap g-6  text-gray-800">
@@ -47,7 +47,7 @@
                                         </div>
                                     @endif
 
-                                    <form action=action="{{ route('login') }} method="POST">
+                                    <form action="" method="POST">
                                         @csrf
                                         <p class="font-medium mb-1">NIM</p>
                                         <div class="mb-2">
@@ -64,14 +64,16 @@
                                             @error('password')
                                                 <p style="color: red">{{ $message }}</p>
                                             @enderror
-                                            <x-text-input id="password" class="block mt-1 w-full text-black" type="password" name="password" required
-                                            autocomplete="current-password" />
+                                            <input type="password"
+                                                class="form-control block w-full px-3 py-1.5 text-base font-montserrat text-gray-700 bg-dark bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-dark focus:border-blue-600 focus:outline-none"
+                                                id="exampleFormControlInput1" placeholder="Gunakan sata sandi SIAM mu"
+                                                name="password" />
                                         </div>
                                         <div class="text-center pt-1 pb-1">
                                             <button
-                                                class="inline-block px-6 py-2.5 font-medium text-white text-lg leading-tight uppercase rounded shadow-md bg-[#F3BC2C] hover:bg-purple hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3  drop-shadow-md"
+                                                class="inline-block px-6 py-2.5 text-white font-medium text-lg leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 bg-[#329D9C] drop-shadow-md"
                                                 type="submit" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                                {{ __('Log in') }}
+                                                Log in
                                             </button>
                                         </div>
                                     </form>
@@ -98,7 +100,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- Session Status -->
     {{-- <x-auth-session-status class="mb-4" :status="session('status')" />
 

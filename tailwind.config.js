@@ -13,7 +13,26 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                philosopher : ['Philosoper', 'sans-serif'],
+                jakarta : ['Plus Jakarta Sans', 'sans-serif'],
+                poppins : ['Poppins', 'sans-serif']
             },
+            container: {
+                padding: {
+                    DEFAULT: "1rem",
+                    sm: "2rem",
+                    lg: "4rem",
+                    xl: "5rem",
+                    "2xl": "6rem",
+                },
+            },
+            colors:{
+                green : '#32524E',
+                yellow : '#F3BC2C',
+                purple : '#8A5780',
+                purpleSoft : '#BD8FB4',
+
+            }
         },
     },
 
